@@ -87,7 +87,7 @@ def is_collision(t1, t2):
 	x_sq = math.pow(t1.xcor() - t2.xcor(), 2)
 	y_sq = math.pow(t1.ycor() - t2.ycor(), 2)
 	distance = math.sqrt(x_sq + y_sq)
-	if distance < 15:
+	if distance <= 25:
 		return True
 	else:
 		return False
@@ -128,7 +128,7 @@ while True:
 		if is_collision(bullet, enemy):
 			os.system("afplay explosion.wav&")
 			bullet.hideturtle()
-			bullet.setposition(0, -280)
+			bullet.setposition(0, -300)
 			enemy.setposition(-200, 250)
 			enemyx = enemy.xcor() + enemy_speed
 			enemy.setx(enemyx)
