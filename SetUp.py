@@ -12,6 +12,8 @@ screen.bgpic("background.gif")
 #register the shapes
 turtle.register_shape("invader.gif")
 turtle.register_shape("player.gif")
+turtle.register_shape("weapon.gif")
+
 
 #border setup
 border_pen = turtle.Turtle()
@@ -50,7 +52,7 @@ playerspeed = 15
 #weapon setup
 bullet = turtle.Turtle()
 bullet.color("orange")
-bullet.shape("triangle")
+bullet.shape("weapon.gif")
 bullet.penup()
 bullet.speed(0)
 bullet.setheading(90)
